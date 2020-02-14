@@ -6,7 +6,7 @@
 
 (pt)
 
-O projeto de Multimédia tem os seguintes requisitos: 
+ 
 - Aplicação desenvolvida em PHP - 
 - HTML5 e CSS, com Bootstrap - 
 - Base de dados MySQL - 
