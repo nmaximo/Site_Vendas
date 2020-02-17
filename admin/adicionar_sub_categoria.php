@@ -28,7 +28,7 @@ if (!isset($_SESSION['loggedin'])) {
     if (isset($_SESSION['id']) && isset($_SESSION['username'])) {
         $iduser = $_SESSION['id'];
         require_once "../ligacao_bd.php";
-        $sql = "select Tipo_Utilizador_id  from utilizador where id = $iduser and Tipo_Utilizador_id = 3";
+        $sql = "select Tipo_Utilizador_id  from utilizador where id = $iduser and Tipo_Utilizador_id = 1";
         $result = $link->query($sql);
         if ($result->num_rows == 1) {
             //ok
@@ -78,13 +78,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 mysqli_close($link);
 
 ?>
-<table width='800 px' border='1' align='center'>
-    <form id="form_registo" name="form_registo" method="POST" action="adicionar_sub_categoria.php">
-        <td>Nome da subcategoria: <input type="text" name="username" size="20" id="username" /> Obrigatório </td>
-        <p><td><input type="submit" name="registar" id="registar" value="Registar" />
-            <input type="reset" name="apagar" id="apagar" value="Apagar" /></td></tr>
-    </form>
-    <td colspan="4" align="center"><p>Clique <a href="menu_admin.php">aqui</a> para voltar ao menu de administrador</p>
+<table class="table"
+
+<tr>
+    <th scope="col">Introduza uma Sub Categoria</th></tr>
+
+<th scope="row">Nome da Sub categoria</th>
+
+<form id="form_registo" name="form_registo" method="POST" action="adicionar_sub_categoria.php">
+    <td> <input type="text" size="30" name="username" id="username"/>  </td>
+    <p><td><input  type="submit" name="registar" id="registar" value="registar" class="btn btn-primary" />
+        <input class="btn btn-primary" type="reset" name="apagar" id="apagar" value="Apagar" /></td></tr>
+</form>
+<td><p>Clique <a href="menu_admin.php">aqui</a> para voltar ao menu de administrador</p>
+</td>
+</tr>
+
+
 </table>
 </body>
 </html>

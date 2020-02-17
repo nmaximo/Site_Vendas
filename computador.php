@@ -221,12 +221,11 @@ $cart_count = count(array_keys($_SESSION["shopping_cart"]));
 <?php
 }
 
-$result = mysqli_query($link, 'SELECT * FROM `produto`where Categoria_id = 1');
+$result = mysqli_query($link, 'SELECT * FROM `produto`');
 while($row = mysqli_fetch_assoc($result)){
 		echo "<div class='product_wrapper' style='color: black'>
 			  <form method='post' action=''>
 			  <input type='hidden' name='codigo' value=" . $row['codigo'] . " />
-			  <div class='image'><img src='" . $row['image'] . "' /></div>
 			  <div class='name'>" . $row['nome'] . "</div>
 		   	  <div class='price' style='color: black'>€" . $row['preco'] . "</div>
 			  <button type='submit' class=\"btn btn-primary\">Adicionar ao Carrinho</button>

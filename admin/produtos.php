@@ -1,6 +1,6 @@
 <?php
 // Include config file
-require_once "ligacao_bd.php";
+require_once "../ligacao_bd.php";
 
 // Define variables and initialize with empty values
 $nome = $codigo = $preco = $descricao = "";
@@ -76,7 +76,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Attempt to execute the prepared statement
             if (mysqli_stmt_execute($stmt)) {
                 // Redirect to login page
-                header("location: admin/menu_admin.php");
+                header("location: menu_admin.php");
             } else {
                 echo "Ocorreu um erro. Por favor tente mais tarde.";
                 echo mysqli_error($link);
@@ -199,7 +199,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     $rows1[] = $row1;
                 }
                 foreach ($rows1 as $row1) {
-                    echo '<option value="' . $row['id'] . '">' . $row['nome'] . "</option>";
+                    echo '<option value="' . $row1['id'] . '">' . $row1['nome'] . "</option>";
                 }
                 // Close connection
                 mysqli_close($link);
@@ -211,9 +211,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         <div class="form-group">
             <input type="submit" class="btn btn-primary" value="Submeter">
-            <input type="reset" class="btn btn-default" value="Cancelar">
         </div>
-        <p>Já tem uma conta? <a href="login.php">Entre aqui!</a></p>
+        <p>Menu anterior? <a href="menu_admin.php">Clique aqui!</a></p>
     </form>
 </div>
 </body>

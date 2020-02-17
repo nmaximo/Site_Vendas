@@ -240,7 +240,6 @@ if(isset($_SESSION["shopping_cart"])){
 foreach ($_SESSION["shopping_cart"] as $product) {
     ?>
     <tr>
-        <td><img src='<?php echo $product["image"]; ?>' width="50" height="40"/></td>
         <td><?php echo $product["nome"]; ?><br/>
             <form method='post' action=''>
                 <input type='hidden' name='codigo' value="<?php echo $product["codigo"]; ?>"/>

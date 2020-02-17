@@ -36,7 +36,7 @@ if (!isset($_SESSION['loggedin'])) {
     if (isset($_SESSION['id']) && isset($_SESSION['username'])) {
         $iduser = $_SESSION['id'];
         require_once "../ligacao_bd.php";
-        $sql = "select Tipo_Utilizador_id  from utilizador where id = $iduser and Tipo_Utilizador_id = 3";
+        $sql = "select Tipo_Utilizador_id  from utilizador where id = $iduser and Tipo_Utilizador_id = 1";
         $result = $link->query($sql);
         if ($result->num_rows == 1) {
             //ok

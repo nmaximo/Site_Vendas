@@ -35,6 +35,7 @@
                 //ok
                 print "  <a href=\"adicionar_categoria.php\" class=\"btn btn-primary\">Adicionar Categoria</a>
     <a href=\"adicionar_sub_categoria.php\" class=\"btn btn-primary\">Adicionar Sub Categoria</a>
+    <a href=\"produtos.php\" class=\"btn btn-primary\">Adicionar Produto</a>
     <a href=\"remover_categoria.php\" class=\"btn btn-danger\">Remover Categoria</a>
     <a href=\"remover_sub_categoria.php\" class=\"btn btn-danger\">Remover Sub Categoria</a>
     <a href=\"sair.php\" class=\"btn btn-danger\">Sair</a>";
